@@ -1,11 +1,3 @@
-import {
-  Desk01FreeIcons,
-  Gif01FreeIcons,
-  News01FreeIcons,
-  ReactFreeIcons,
-  TailwindcssFreeIcons,
-  Typescript01FreeIcons,
-} from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 
 import {
@@ -16,57 +8,11 @@ import {
 } from "@/components/ui/item";
 import { SectionHeader } from "@/components/ui/section-header";
 
-export const technologies = [
-  {
-    name: "TypeScript",
-    description: "JavaScript but better",
-    icon: Typescript01FreeIcons,
-  },
-  {
-    name: "NestJS",
-    description: "Node framework",
-    icon: News01FreeIcons,
-  },
-  {
-    name: "Next.js",
-    description: "React framework",
-    icon: ReactFreeIcons,
-  },
-  {
-    name: "Postgres",
-    description: "SQL database",
-    icon: Desk01FreeIcons,
-  },
-  {
-    name: "Tailwind",
-    description: "CSS framework",
-    icon: TailwindcssFreeIcons,
-  },
-  {
-    name: "Docker",
-    description: "Containerization tool",
-    icon: Gif01FreeIcons,
-  },
-  {
-    name: "Git",
-    description: "Version control",
-    icon: Gif01FreeIcons,
-  },
-  {
-    name: "React",
-    description: "UI library",
-    icon: ReactFreeIcons,
-  },
-  {
-    name: "Node.js",
-    description: "JS runtime",
-    icon: Desk01FreeIcons,
-  },
-];
+import { technologies } from "@/data/technologies";
 
 export function TechnologiesSection() {
   return (
-    <section>
+    <section className="scroll-m-20" id="technologies">
       <div className="container">
         <SectionHeader
           description="A list of technologies I use for my work"
