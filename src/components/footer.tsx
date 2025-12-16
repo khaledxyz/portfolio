@@ -45,7 +45,7 @@ export function Footer() {
   const time = useAlgiersTime();
 
   return (
-    <footer className="mt-auto mb-0 border-t">
+    <footer className="z-50 mt-auto mb-0 border-t bg-background">
       <div className="container py-6">
         <div className="flex flex-col gap-6">
           {/* Top Section */}
