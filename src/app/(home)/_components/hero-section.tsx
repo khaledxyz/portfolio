@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
   return (
-    <section>
+    <section className="mt-20">
       <div className="container space-y-5">
         <Badge variant="secondary">Check source code on Github!</Badge>
         <h1 className="font-bold text-5xl md:text-6xl">
