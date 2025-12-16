@@ -23,10 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html className={fonts} lang="en" suppressHydrationWarning>
-      <body className="flex min-h-screen flex-col space-y-20 bg-background font-sans text-foreground antialiased">
+      <body className="flex min-h-screen flex-col bg-background font-sans text-foreground antialiased">
         <Providers>
           <Navbar />
-          {children}
+          <main className="flex flex-1 flex-col space-y-20">{children}</main>
           <Footer />
         </Providers>
       </body>
