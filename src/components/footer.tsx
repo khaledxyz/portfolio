@@ -16,6 +16,8 @@ import { Separator } from "@/components/ui/separator";
 
 import { socialByKey, socials } from "@/data/socials";
 
+import { ClicksButton } from "./clicks-button";
+
 function useAlgiersTime() {
   const [time, setTime] = useState("");
 
@@ -101,7 +103,10 @@ export function Footer() {
               </div>
             </div>
 
-            <ThemePicker />
+            <div className="flex items-center gap-1">
+              <ThemePicker />
+              <ClicksButton />
+            </div>
           </div>
         </div>
       </div>
