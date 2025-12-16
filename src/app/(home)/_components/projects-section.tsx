@@ -17,7 +17,7 @@ export function ProjectsSection() {
   const projects = ["", "", "", ""];
 
   return (
-    <section>
+    <section className="scroll-m-20" id="projects">
       <div className="container">
         <SectionHeader
           description="A selection of my recent work and side projects"

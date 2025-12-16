@@ -10,7 +10,7 @@ import { socials } from "@/data/socials";
 
 export function AboutSection() {
   return (
-    <section>
+    <section className="scroll-m-20" id="about">
       <div className="container">
         <SectionHeader
           description="FullStack Web Developer"
