@@ -16,7 +16,7 @@ export function Navbar() {
     >
       <div className="container flex items-center justify-between py-3">
         <div className="flex items-center space-x-5">
-          <Logo href="#top" isLink />
+          <Logo href="/#top" isLink />
           <ul>
             {links.map((link, i) => (
               <Button asChild key={i} variant="ghost">

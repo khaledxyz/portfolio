@@ -1,12 +1,12 @@
 export const links = [
   {
     label: "About",
-    href: "#about",
+    href: "/#about",
   },
 
   {
     label: "Projects",
-    href: "#projects",
+    href: "/#projects",
   },
   {
     label: "Technologies",
@@ -14,6 +14,6 @@ export const links = [
   },
   {
     label: "Features",
-    href: "#features",
+    href: "/#features",
   },
 ];
