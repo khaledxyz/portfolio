@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 
+import { TooltipProvider } from "@/components/ui/tooltip";
+
 import { ThemeProvider } from "./theme-provider";
 
 interface Props {
@@ -14,7 +16,7 @@ export function Providers({ children }: Props) {
       disableTransitionOnChange
       enableSystem
     >
-      {children}
+      <TooltipProvider>{children}</TooltipProvider>
     </ThemeProvider>
   );
 }
