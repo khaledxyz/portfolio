@@ -60,6 +60,9 @@ importers:
       '@biomejs/biome':
         specifier: 2.3.8
         version: 2.3.8
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.2.1)
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.1.18
@@ -346,6 +349,14 @@ packages:
     resolution: {integrity: sha512-BAbFVtx0XZ/yF2poPLFn0N9Ji6ebV/MpI5+WRqooFp3smQDwpL+72m+BBs4KAM5djgWUpg12weyc5SJtTsOwsw==}
     peerDependencies:
       react: '>=16.0.0'
+
+  '@iconify/react@6.0.2':
+    resolution: {integrity: sha512-SMmC2sactfpJD427WJEDN6PMyznTFMhByK9yLW0gOTtnjzzbsi/Ke/XqsumsavFPwNiXs8jSiYeZTmLCLwO+Fg==}
+    peerDependencies:
+      react: '>=16'
+
+  '@iconify/types@2.0.0':
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
 
   '@img/colour@1.0.0':
     resolution: {integrity: sha512-A5P/LfWGFSl6nsckYtjw9da+19jB8hkJ6ACTGcDfEJ0aE+l2n2El7dsVM7UVHZQ9s2lmYMWlrS21YLy2IR1LUw==}
@@ -3295,6 +3306,13 @@ snapshots:
   '@hugeicons/react@1.1.1(react@19.2.1)':
     dependencies:
       react: 19.2.1
+
+  '@iconify/react@6.0.2(react@19.2.1)':
+    dependencies:
+      '@iconify/types': 2.0.0
+      react: 19.2.1
+
+  '@iconify/types@2.0.0': {}
 
   '@img/colour@1.0.0':
     optional: true

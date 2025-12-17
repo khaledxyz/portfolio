@@ -1,56 +1,146 @@
-import {
-  Desk01FreeIcons,
-  Gif01FreeIcons,
-  News01FreeIcons,
-  ReactFreeIcons,
-  TailwindcssFreeIcons,
-  Typescript01FreeIcons,
-} from "@hugeicons/core-free-icons";
-
 export const technologies = [
   {
     name: "TypeScript",
-    description: "JavaScript but better",
-    icon: Typescript01FreeIcons,
-  },
-  {
-    name: "NestJS",
-    description: "Node framework",
-    icon: News01FreeIcons,
-  },
-  {
-    name: "Next.js",
-    description: "React framework",
-    icon: ReactFreeIcons,
-  },
-  {
-    name: "Postgres",
-    description: "SQL database",
-    icon: Desk01FreeIcons,
-  },
-  {
-    name: "Tailwind",
-    description: "CSS framework",
-    icon: TailwindcssFreeIcons,
-  },
-  {
-    name: "Docker",
-    description: "Containerization tool",
-    icon: Gif01FreeIcons,
-  },
-  {
-    name: "Git",
-    description: "Version control",
-    icon: Gif01FreeIcons,
-  },
-  {
-    name: "React",
-    description: "UI library",
-    icon: ReactFreeIcons,
+    icon: "devicon:typescript",
+    plainIcon: "devicon-plain:typescript",
+    useInvert: false, // Has white text on blue background
   },
   {
     name: "Node.js",
-    description: "JS runtime",
-    icon: Desk01FreeIcons,
+    icon: "devicon:nodejs",
+    plainIcon: "devicon-plain:nodejs",
+    useInvert: false,
+  },
+  {
+    name: "Express",
+    icon: "devicon:express",
+    plainIcon: "devicon-plain:express",
+    useInvert: true, // Solid icon, works with invert
+  },
+  {
+    name: "NestJS",
+    icon: "devicon:nestjs",
+    plainIcon: "devicon-plain:nestjs",
+    useInvert: true,
+  },
+  {
+    name: "Socket.IO",
+    icon: "devicon:socketio",
+    plainIcon: "devicon-plain:socketio",
+    useInvert: true,
+  },
+  {
+    name: "Drizzle",
+    icon: "catppuccin:drizzle-orm",
+    plainIcon: "catppuccin:drizzle-orm",
+    useInvert: true,
+  },
+  {
+    name: "Prisma",
+    icon: "devicon:prisma",
+    plainIcon: "devicon-plain:prisma",
+    useInvert: true,
+  },
+  {
+    name: "TypeORM",
+    icon: "devicon:typeorm",
+    plainIcon: "devicon:typescript",
+    useInvert: true,
+  },
+  {
+    name: "Sequelize",
+    icon: "devicon:sequelize",
+    plainIcon: "devicon-plain:sequelize",
+    useInvert: false,
+  },
+  {
+    name: "PostgreSQL",
+    icon: "devicon:postgresql",
+    plainIcon: "devicon-plain:postgresql",
+    useInvert: false,
+  },
+  {
+    name: "MySQL",
+    icon: "devicon:mysql",
+    plainIcon: "devicon-plain:mysql",
+    useInvert: true,
+  },
+  {
+    name: "Redis",
+    icon: "devicon:redis",
+    plainIcon: "devicon-plain:redis",
+    useInvert: false,
+  },
+  {
+    name: "React",
+    icon: "devicon:react",
+    plainIcon: "devicon-plain:react",
+    useInvert: true,
+  },
+  {
+    name: "Next.js",
+    icon: "devicon:nextjs",
+    plainIcon: "devicon-plain:nextjs",
+    useInvert: false,
+  },
+  {
+    name: "Vite",
+    icon: "devicon:vitejs",
+    plainIcon: "devicon-plain:vitejs",
+    useInvert: false,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "devicon:tailwindcss",
+    plainIcon: "devicon-plain:tailwindcss",
+    useInvert: true,
+  },
+  {
+    name: "Sass",
+    icon: "devicon:sass",
+    plainIcon: "devicon-plain:sass",
+    useInvert: true,
+  },
+  {
+    name: "Webpack",
+    icon: "devicon:webpack",
+    plainIcon: "devicon-plain:webpack",
+    useInvert: true,
+  },
+  {
+    name: "Docker",
+    icon: "devicon:docker",
+    plainIcon: "devicon-plain:docker",
+    useInvert: false,
+  },
+  {
+    name: "GitHub",
+    icon: "devicon:github",
+    plainIcon: "devicon-plain:github",
+    useInvert: true,
+  },
+  {
+    name: "Traefik",
+    icon: "devicon:traefikproxy",
+    plainIcon: "devicon-plain:traefikproxy",
+    useInvert: true,
+  },
+  {
+    name: "Kubernetes",
+    icon: "devicon:kubernetes",
+    plainIcon: "devicon-plain:kubernetes",
+    useInvert: false,
+  },
+  {
+    name: "Nginx",
+    icon: "devicon:nginx",
+    plainIcon: "devicon-plain:nginx",
+    useInvert: true,
+  },
+  {
+    name: "Linux",
+    icon: "devicon:linux",
+    plainIcon: "devicon-plain:linux",
+    useInvert: false,
   },
 ];
