@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { ArrowRight01FreeIcons } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
@@ -13,8 +14,12 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { SectionHeader } from "@/components/ui/section-header";
+
+import type { ProjectMetadata } from "@/lib/projects";
+import { getAllProjects } from "@/lib/projects";
+
 export function ProjectsSection() {
-  const projects = ["", "", "", ""];
+  const projects = getAllProjects();
 
   return (
     <section className="scroll-m-20" id="projects">
@@ -26,8 +31,8 @@ export function ProjectsSection() {
         />
 
         <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
-          {projects.map((_, i) => (
-            <ProjectCard key={i} />
+          {projects.map((project, i) => (
+            <ProjectCard key={i} project={project} />
           ))}
         </div>
 
@@ -46,30 +51,32 @@ export function ProjectsSection() {
   );
 }
 
-function ProjectCard() {
+function ProjectCard({ project }: { project: ProjectMetadata }) {
   return (
-    <Card className="group cursor-pointer overflow-hidden pt-0">
-      <div className="relative h-52 w-full overflow-hidden">
-        <Image
-          alt=""
-          className="object-cover object-center transition-transform duration-700 group-hover:scale-125"
-          fill
-          src="/project-placeholder.jpeg"
-        />
-      </div>
-      <CardHeader>
-        <CardTitle>Snapit - URL Shortener</CardTitle>
-        <CardDescription>
-          Switch to the improved way to explore your data, with natural
-          language. Monitoring will no longer be available on the Pro plan in
-          November, 2025
-        </CardDescription>
-      </CardHeader>
-      <CardFooter className="flex items-center gap-1">
-        <Badge variant="secondary">Next.js</Badge>
-        <Badge variant="secondary">Nestjs</Badge>
-        <Badge variant="secondary">Postgres</Badge>
-      </CardFooter>
-    </Card>
+    <Link href={`projects/${project.slug}#top`}>
+      <Card className="group cursor-pointer overflow-hidden pt-0">
+        <div className="relative h-52 w-full overflow-hidden">
+          <Image
+            alt=""
+            className="object-cover object-center transition-transform duration-700 group-hover:scale-125"
+            fill
+            src="/project-placeholder.jpeg"
+          />
+        </div>
+        <CardHeader>
+          <CardTitle>{project.title}</CardTitle>
+          <CardDescription>{project.description}</CardDescription>
+        </CardHeader>
+        <CardFooter className="flex flex-wrap items-center gap-1">
+          {Array.isArray(project.tags) &&
+            project.tags.length > 0 &&
+            project.tags.map((tag) => (
+              <Badge key={tag} variant="secondary">
+                {tag}
+              </Badge>
+            ))}
+        </CardFooter>
+      </Card>
+    </Link>
   );
 }
