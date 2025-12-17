@@ -85,24 +85,30 @@
   html {
     scroll-behavior: smooth;
   }
-}
 
-@utility container {
-  @apply max-w-4xl;
-  margin-inline: auto;
-  padding: 1rem;
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px) rotate(-8deg);
+  main {
+    overflow-x: hidden;
   }
-  50% {
-    transform: translateY(-12px) rotate(-6deg);
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(-8deg);
+    }
+    50% {
+      transform: translateY(-12px) rotate(-6deg);
+    }
   }
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+@layer utilities {
+  .container {
+    @apply max-w-4xl;
+    margin-inline: auto;
+    padding: 1rem;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
 }
