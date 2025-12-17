@@ -20,7 +20,7 @@ export function FeaturesSection() {
           title="What I Build"
         />
 
-        <div className="mt-10 grid grid-cols-2 gap-5">
+        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
           {features.map((feature, i) => (
             <Card className="pt-0" key={i}>
               <div className="relative h-52 w-full overflow-hidden">

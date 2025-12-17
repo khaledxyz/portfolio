@@ -25,7 +25,7 @@ export function ProjectsSection() {
           title="Featured Projects"
         />
 
-        <div className="mt-10 grid grid-cols-2 gap-5">
+        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
           {projects.map((_, i) => (
             <ProjectCard key={i} />
           ))}
