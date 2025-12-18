@@ -6,9 +6,13 @@ import { Icon } from "@/components/ui/icon";
 
 export function HeroSection() {
   return (
-    <section className="mt-20">
-      <div className="container space-y-5">
-        <Badge asChild variant="secondary">
+    <section>
+      <div className="container mt-10 space-y-5">
+        <Badge
+          asChild
+          className="fade-in motion-delay-300 animate-backwards"
+          variant="secondary"
+        >
           <Link
             className="group"
             href="https://github.com/khaledxyz/portfolio"
@@ -23,15 +27,22 @@ export function HeroSection() {
             />
           </Link>
         </Badge>
-        <h1 className="font-bold text-5xl md:text-6xl">
+
+        <h1 className="fade-in motion-delay-350 animate-backwards font-bold text-5xl md:text-6xl">
           Engineering products that scale beyond orbit
         </h1>
-        <p className="max-w-2xl text-muted-foreground">
+
+        <p className="fade-in motion-delay-400 max-w-2xl animate-backwards text-muted-foreground">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga impedit
           nam voluptate fugiat maiores autem esse. Commodi, ratione aliquam.
           Perferendis?
         </p>
-        <Button asChild size="lg">
+
+        <Button
+          asChild
+          className="fade-in motion-delay-450 animate-backwards"
+          size="lg"
+        >
           <Link href="#projects">
             See My Work
             <Icon icon="hugeicons:arrow-right-01" strokeWidth={2} />
