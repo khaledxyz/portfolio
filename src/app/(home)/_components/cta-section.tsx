@@ -20,7 +20,7 @@ export function CtaSection() {
               alt="Astronaut"
               className="pointer-events-none h-32 w-32 md:h-48 md:w-48 lg:h-56 lg:w-56"
               height={224}
-              src="/astronaut.svg"
+              src="/astronaut.webp"
               width={224}
             />
           </div>

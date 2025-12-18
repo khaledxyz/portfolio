@@ -22,7 +22,12 @@ export function AboutSection() {
         <div className="mt-10 grid gap-12 md:grid-cols-[200px_1fr]">
           <div className="fade-in motion-delay-550 flex justify-center md:justify-start">
             <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-muted">
-              <Image alt="" className="object-cover" fill src="/portrait.jpg" />
+              <Image
+                alt=""
+                className="object-cover"
+                fill
+                src="/portrait.webp"
+              />
             </div>
           </div>
 

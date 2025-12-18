@@ -22,7 +22,7 @@ export default function NotFound() {
               alt="Astronaut"
               className="pointer-events-none h-32 w-32 sm:h-48 sm:w-48 lg:h-56 lg:w-56"
               height={224}
-              src="/astronaut.svg"
+              src="/astronaut.webp"
               width={224}
             />
           </div>
