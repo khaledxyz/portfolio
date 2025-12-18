@@ -63,8 +63,8 @@ function ProjectCard({
 }) {
   return (
     <ScrollReveal delay={delay}>
-      <Link href={`projects/${project.slug}#top`}>
-        <Card className="group cursor-pointer overflow-hidden pt-0">
+      <Link className="block h-full" href={`projects/${project.slug}#top`}>
+        <Card className="group flex h-full cursor-pointer flex-col overflow-hidden pt-0">
           <div className="relative h-52 w-full overflow-hidden">
             <Image
               alt=""
@@ -73,7 +73,7 @@ function ProjectCard({
               src="/project-placeholder.jpeg"
             />
           </div>
-          <CardHeader>
+          <CardHeader className="flex-1">
             <CardTitle>{project.title}</CardTitle>
             <CardDescription>{project.description}</CardDescription>
           </CardHeader>
