@@ -121,4 +121,8 @@
   .fade-in {
     @apply motion-opacity-in-0 motion-blur-in-xl motion-duration-1500;
   }
+
+  .scroll-in {
+    @apply motion-opacity-in-0 motion-translate-y-in-25;
+  }
 }

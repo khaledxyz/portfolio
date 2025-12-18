@@ -13,20 +13,21 @@ export function AboutSection() {
     <section className="scroll-m-20" id="about">
       <div className="container">
         <SectionHeader
+          className="fade-in motion-delay-500"
           description="FullStack Web Developer"
           overline="About"
           title="Khaled"
         />
 
         <div className="mt-10 grid gap-12 md:grid-cols-[200px_1fr]">
-          <div className="flex justify-center md:justify-start">
+          <div className="fade-in motion-delay-550 flex justify-center md:justify-start">
             <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-muted">
               <Image alt="" className="object-cover" fill src="/portrait.jpg" />
             </div>
           </div>
 
           {/* Content */}
-          <div className="space-y-8">
+          <div className="fade-in motion-delay-600 space-y-8">
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
                 I specialize in crafting full-stack applications that prioritize

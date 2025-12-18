@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight01FreeIcons } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 
+import { ScrollReveal } from "@/components/scroll-reveal";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -24,15 +25,17 @@ export function ProjectsSection() {
   return (
     <section className="scroll-m-20" id="projects">
       <div className="container">
-        <SectionHeader
-          description="A selection of my recent work and side projects"
-          overline="Portfolio"
-          title="Featured Projects"
-        />
+        <ScrollReveal>
+          <SectionHeader
+            description="A selection of my recent work and side projects"
+            overline="Portfolio"
+            title="Featured Projects"
+          />
+        </ScrollReveal>
 
         <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
           {projects.map((project, i) => (
-            <ProjectCard key={i} project={project} />
+            <ProjectCard delay={i * 100} key={i} project={project} />
           ))}
         </div>
 
@@ -51,32 +54,40 @@ export function ProjectsSection() {
   );
 }
 
-function ProjectCard({ project }: { project: ProjectMetadata }) {
+function ProjectCard({
+  project,
+  delay,
+}: {
+  project: ProjectMetadata;
+  delay?: number;
+}) {
   return (
-    <Link href={`projects/${project.slug}#top`}>
-      <Card className="group cursor-pointer overflow-hidden pt-0">
-        <div className="relative h-52 w-full overflow-hidden">
-          <Image
-            alt=""
-            className="object-cover object-center transition-transform duration-700 group-hover:scale-125"
-            fill
-            src="/project-placeholder.jpeg"
-          />
-        </div>
-        <CardHeader>
-          <CardTitle>{project.title}</CardTitle>
-          <CardDescription>{project.description}</CardDescription>
-        </CardHeader>
-        <CardFooter className="flex flex-wrap items-center gap-1">
-          {Array.isArray(project.tags) &&
-            project.tags.length > 0 &&
-            project.tags.map((tag) => (
-              <Badge key={tag} variant="secondary">
-                {tag}
-              </Badge>
-            ))}
-        </CardFooter>
-      </Card>
-    </Link>
+    <ScrollReveal delay={delay}>
+      <Link href={`projects/${project.slug}#top`}>
+        <Card className="group cursor-pointer overflow-hidden pt-0">
+          <div className="relative h-52 w-full overflow-hidden">
+            <Image
+              alt=""
+              className="object-cover object-center transition-transform duration-700 group-hover:scale-125"
+              fill
+              src="/project-placeholder.jpeg"
+            />
+          </div>
+          <CardHeader>
+            <CardTitle>{project.title}</CardTitle>
+            <CardDescription>{project.description}</CardDescription>
+          </CardHeader>
+          <CardFooter className="flex flex-wrap items-center gap-1">
+            {Array.isArray(project.tags) &&
+              project.tags.length > 0 &&
+              project.tags.map((tag) => (
+                <Badge key={tag} variant="secondary">
+                  {tag}
+                </Badge>
+              ))}
+          </CardFooter>
+        </Card>
+      </Link>
+    </ScrollReveal>
   );
 }
