@@ -1,12 +1,12 @@
-import { fonts } from "@/config/fonts.config";
-import { siteConfig } from "@/config/site.config";
-
-import "./globals.css";
-
+import Analytics from "@/components/analytics";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 
+import { fonts } from "@/config/fonts.config";
+import { siteConfig } from "@/config/site.config";
 import { Providers } from "@/providers";
+
+import "./globals.css";
 
 export const metadata = {
   title: siteConfig.title,
@@ -29,6 +29,8 @@ export default function RootLayout({
           <main className="flex flex-1 flex-col space-y-20">{children}</main>
           <Footer />
         </Providers>
+
+        <Analytics />
       </body>
     </html>
   );
