@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import { LanguageSquareFreeIcons } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
+import { useLocale } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -13,22 +14,19 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-const languages = [
-  {
-    label: "العربية",
-    flag: "/flags/dz.svg",
-  },
-  {
-    label: "English",
-    flag: "/flags/usa.svg",
-  },
-  {
-    label: "Francais",
-    flag: "/flags/fr.svg",
-  },
-];
+import type { LanguageId } from "@/config/languages.config";
+import { languages } from "@/config/languages.config";
+import { setLanguage } from "@/i18n/set-language";
 
 export function LanguagePicker() {
+  const locale = useLocale();
+
+  function handleLanguage(languageId: LanguageId) {
+    setLanguage(languageId);
+  }
+
+  console.log(locale);
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -38,9 +36,13 @@ export function LanguagePicker() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="min-w-30 space-y-1">
         {languages.map((language, i) => (
-          <DropdownMenuItem key={i}>
+          <DropdownMenuItem
+            className={locale === language.id ? "bg-muted" : ""}
+            key={i}
+            onClick={() => handleLanguage(language.id)}
+          >
             <Image alt="" height={16} src={language.flag} width={16} />
-            {language.label}
+            {language.name}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
