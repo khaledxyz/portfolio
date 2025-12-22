@@ -65,12 +65,12 @@ function ProjectCard({
     <ScrollReveal delay={delay}>
       <Link className="block h-full" href={`projects/${project.slug}#top`}>
         <Card className="group flex h-full cursor-pointer flex-col overflow-hidden pt-0">
-          <div className="relative h-52 w-full overflow-hidden">
+          <div className="relative aspect-video w-full overflow-hidden">
             <Image
               alt=""
-              className="object-cover object-center transition-transform duration-700 group-hover:scale-125"
+              className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
               fill
-              src="/project-placeholder.jpeg"
+              src={project.thumbnail}
             />
           </div>
           <CardHeader className="flex-1">

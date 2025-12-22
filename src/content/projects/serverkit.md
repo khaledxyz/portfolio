@@ -2,7 +2,7 @@
 title: "ServerKit"
 description: "A GUI tool for generating Linux provisioning scripts. Simple interface, reliable output."
 slug: "serverkit"
-thumbnail: "/project-placeholder.jpeg"
+thumbnail: "/projects/serverkit-thumbnail.webp"
 github: "https://github.com/khaledxyz/serverkit"
 demo: "https://serverkit.netlify.app"
 tags: ["React", "Linux", "DevOps"]

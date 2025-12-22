@@ -2,7 +2,7 @@
 title: "Portfolio Website"
 description: "My personal portfolio built with performance and accessibility in mind. Open source and pixel-perfect."
 slug: "portfolio-website"
-thumbnail: "/project-placeholder.jpeg"
+thumbnail: "/projects/portfolio-thumbnail.webp"
 github: "https://github.com/khaledxyz/portfolio"
 demo: "https://khaledxyz.com"
 tags: ["Next.js", "Tailwind"]

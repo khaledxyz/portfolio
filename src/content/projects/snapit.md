@@ -2,7 +2,7 @@
 title: "SnapIt - URL Shortener"
 description: "A simple url shortener and a playground project for testing Better Auth and auto-generated API clients. Built with Next.js, NestJS, and PostgreSQL."
 slug: "snapit-url-shortener"
-thumbnail: "/project-placeholder.jpeg"
+thumbnail: "/projects/snapit-thumbnail.webp"
 github: "https://github.com/khaledxyz/snapit"
 demo: "https://app.snapit.one"
 tags: ["Next.js", "NestJS", "PostgreSQL", "Tailwind"]
