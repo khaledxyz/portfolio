@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 
@@ -34,7 +35,9 @@ export function CtaSection() {
                 Start building something amazing today
               </p>
             </div>
-            <Button size="xl">Launch Project</Button>
+            <Button asChild size="xl">
+              <Link href="/#about">Launch Project</Link>
+            </Button>
           </div>
         </div>
       </div>
