@@ -33,9 +33,10 @@ export function HeroSection() {
         </h1>
 
         <p className="fade-in motion-delay-400 max-w-2xl animate-backwards text-muted-foreground">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga impedit
-          nam voluptate fugiat maiores autem esse. Commodi, ratione aliquam.
-          Perferendis?
+          I build full-stack applications that balance performance,
+          maintainability, and user experience. From scalable backend
+          architecture to polished frontend interfaces, I deliver reliable
+          solutions at scale.
         </p>
 
         <Button
