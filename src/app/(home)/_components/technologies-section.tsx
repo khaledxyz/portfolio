@@ -15,16 +15,15 @@ export function TechnologiesSection() {
             title="Current Technologies"
           />
         </ScrollReveal>
-
-        <ScrollReveal>
-          <ul className="mt-10 flex flex-wrap gap-1">
-            {technologies.map((tech, i) => (
-              <li className="rounded-md bg-card p-5 hover:bg-card/80" key={i}>
+        <ul className="mt-10 grid grid-cols-[repeat(auto-fill,minmax(4rem,1fr))] gap-1">
+          {technologies.map((tech, i) => (
+            <ScrollReveal delay={i * 50} key={i}>
+              <li className="rounded-md bg-card p-5 hover:bg-card/80">
                 <Icon className="size-7" icon={tech.icon} />
               </li>
-            ))}
-          </ul>
-        </ScrollReveal>
+            </ScrollReveal>
+          ))}
+        </ul>
       </div>
     </section>
   );
