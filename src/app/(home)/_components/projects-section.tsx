@@ -1,12 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { ArrowRight01FreeIcons } from "@hugeicons/core-free-icons";
-import { HugeiconsIcon } from "@hugeicons/react";
-
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardDescription,
@@ -39,7 +35,7 @@ export function ProjectsSection() {
           ))}
         </div>
 
-        <div className="mt-5 flex items-center justify-end">
+        {/* <div className="mt-5 flex items-center justify-end">
           <Button variant="secondary">
             All Projects
             <HugeiconsIcon
@@ -48,7 +44,7 @@ export function ProjectsSection() {
               strokeWidth={2}
             />
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
