@@ -19,8 +19,6 @@ import {
 
 import { links } from "@/config/links.config";
 
-import { LanguagePicker } from "./language-picker";
-
 export function Navbar() {
   return (
     <nav
@@ -42,7 +40,7 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-1">
-          <LanguagePicker />
+          {/* <LanguagePicker /> */}
           <ThemePicker />
 
           {/* Mobile Navigation Drawer */}
