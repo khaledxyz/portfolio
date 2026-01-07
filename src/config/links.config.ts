@@ -12,8 +12,4 @@ export const links = [
     label: "Technologies",
     href: "#technologies",
   },
-  {
-    label: "Features",
-    href: "/#features",
-  },
 ];
