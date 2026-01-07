@@ -18,7 +18,7 @@ export function TechnologiesSection() {
         <ul className="mt-10 grid grid-cols-[repeat(auto-fill,minmax(4rem,1fr))] gap-1">
           {technologies.map((tech, i) => (
             <ScrollReveal delay={i * 50} key={i}>
-              <li className="rounded-md bg-card p-5 hover:bg-card/80">
+              <li className="flex items-center justify-center rounded-md bg-card p-5 hover:bg-card/80">
                 <Icon className="size-7" icon={tech.icon} />
               </li>
             </ScrollReveal>
