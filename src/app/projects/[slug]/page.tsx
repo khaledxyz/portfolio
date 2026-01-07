@@ -77,8 +77,7 @@ export default async function ProjectPage({
               Back to Projects
             </Link>
           </Button>
-          <div className="space-y-6">
-            {/* Hero Image */}
+          <div className="space-y-5">
             <div className="relative aspect-video w-full overflow-hidden rounded-lg border">
               <Image
                 alt={metadata.title}
@@ -88,61 +87,53 @@ export default async function ProjectPage({
                 src={metadata.thumbnail}
               />
             </div>
-
-            {/* Title & Actions */}
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-              <div className="flex-1 space-y-3">
+            <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-start">
+              <div className="flex-1 space-y-2">
                 <h1 className="font-bold text-3xl tracking-tight sm:text-4xl lg:text-5xl">
                   {metadata.title}
                 </h1>
-                {metadata.description && (
+                {metadata.description ? (
                   <p className="text-base text-muted-foreground sm:text-lg">
                     {metadata.description}
                   </p>
-                )}
+                ) : null}
               </div>
-
-              {/* Action Buttons */}
-              {(metadata.demo || metadata.github) && (
-                <div className="flex shrink-0 gap-2">
-                  {metadata.demo && (
-                    <Button asChild size="sm">
-                      <Link
-                        className="group"
-                        href={metadata.demo}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        <Icon
-                          className="transition-transform group-hover:rotate-45"
-                          icon="hugeicons:arrow-up-right-01"
-                        />
-                        Demo
-                      </Link>
-                    </Button>
-                  )}
-                  {metadata.github && (
-                    <Button asChild size="sm" variant="secondary">
-                      <Link
-                        href={metadata.github}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        <Icon icon="hugeicons:github-01" />
-                        GitHub
-                      </Link>
-                    </Button>
-                  )}
-                </div>
-              )}
+              <div className="flex flex-wrap gap-2 pt-1 sm:pt-0">
+                {metadata.demo ? (
+                  <Button asChild size="sm">
+                    <Link
+                      className="group"
+                      href={metadata.demo}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <Icon
+                        className="transition-transform group-hover:rotate-45"
+                        icon="hugeicons:arrow-up-right-01"
+                      />
+                      Demo
+                    </Link>
+                  </Button>
+                ) : null}
+                {metadata.github ? (
+                  <Button asChild size="sm" variant="secondary">
+                    <Link
+                      href={metadata.github}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <Icon icon="hugeicons:github-01" />
+                      GitHub
+                    </Link>
+                  </Button>
+                ) : null}
+              </div>
             </div>
-
-            {/* Meta Info */}
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-muted-foreground text-sm">
+            <div className="flex flex-wrap items-center gap-3 text-muted-foreground text-sm">
               <time dateTime={metadata.date}>{formattedDate}</time>
-              {metadata.tags?.length > 0 && (
+              {Array.isArray(metadata.tags) && metadata.tags.length > 0 && (
                 <>
-                  <span className="hidden sm:inline">•</span>
+                  <span>•</span>
                   <div className="flex flex-wrap gap-1.5">
                     {metadata.tags.map((tag) => (
                       <Badge key={tag} variant="secondary">
