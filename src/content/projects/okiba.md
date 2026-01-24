@@ -1,15 +1,15 @@
 ---
-title: "KeepStash"
+title: "Okiba"
 description: "A modern, minimal bookmarking app that doesn't suck. Built for self-hosting with React, NestJS, and PostgreSQL."
-slug: "keepstash"
+slug: "okiba"
 thumbnail: "/projects/keepstash-thumbnail.webp"
-github: "https://github.com/khaledxyz/keepstash"
-demo: "https://keepstash.khaledxyz.com"
+github: "https://github.com/khaledxyz/okiba"
+demo: "https://okiba.tech"
 tags: ["React", "NestJS", "PostgreSQL", "PWA", "Docker"]
 date: "2026-01-07"
 ---
 
-# KeepStash
+# okiba
 
 A bookmarking app with a modern UI that actually feels good to use. Built to be easily self-hostable because your bookmarks shouldn't live on someone else's server.
 
@@ -17,7 +17,7 @@ A bookmarking app with a modern UI that actually feels good to use. Built to be 
 
 I wanted a bookmarking app with a UI that feels nice to interact with. Something modern and minimal that I'd actually enjoy using every day. Plus, I wanted full control over where my data lives, which means self-hosting.
 
-So I built KeepStash.
+So I built okiba.
 
 ## Features
 
@@ -49,7 +49,7 @@ Building for production and building for self-hosting are different beasts. Thin
 - Account creation should be toggle-able for security
 - React runtime variables vs build-time variables matter more than I expected
 
-I'm working through these edge cases to make KeepStash as plug-and-play as possible. Docker images are on Docker Hub, but there's still polish needed.
+I'm working through these edge cases to make okiba as plug-and-play as possible. Docker images are on Docker Hub, but there's still polish needed.
 
 ### PWAs Are Cool
 
